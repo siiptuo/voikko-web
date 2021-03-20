@@ -1,0 +1,52 @@
+body {
+    max-width: 600px;
+    margin: 1rem auto;
+    font-family: sans-serif;
+    font-size: 16px;
+    hyphens: auto;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    flex-grow: 1;
+    margin-right: 1rem;
+    font: inherit;
+    padding: 1rem;
+    border: none;
+    background-color: #eee;
+    border-radius: 2px;
+}
+
+button {
+    font: inherit;
+    border: none;
+    background-color: steelblue;
+    color: white;
+    padding: 1rem;
+    border-radius: 2px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 1rem;
+}
+
+th {
+    text-align: left;
+    font-weight: normal;
+}
+
+td {
+    font-weight: bold;
+}
+
+tr:nth-child(2n+1) {
+    background-color: #eee;
+}

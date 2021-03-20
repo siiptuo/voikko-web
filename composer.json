@@ -1,0 +1,19 @@
+{
+    "name": "siiptuo/voikko-web",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Tuomas Siipola",
+            "email": "tuomas@zpl.fi"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../voikko-php"
+        }
+    ],
+    "require": {
+        "siiptuo/voikko": "dev-master"
+    }
+}
