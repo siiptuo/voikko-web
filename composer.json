@@ -9,8 +9,8 @@
     ],
     "repositories": [
         {
-            "type": "path",
-            "url": "../voikko-php"
+            "type": "vcs",
+            "url": "https://github.com/siiptuo/voikko-php"
         }
     ],
     "require": {

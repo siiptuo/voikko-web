@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56c4ea90ee881d6abf16bfe72cebfd79",
+    "content-hash": "a79c2689ac4e795d99f0d19cc7816342",
     "packages": [
         {
             "name": "siiptuo/voikko",
             "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../voikko-php",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/siiptuo/voikko-php.git",
                 "reference": "0e9175fcc4d6cbcae452606068c8d2b1c314ff7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/siiptuo/voikko-php/zipball/0e9175fcc4d6cbcae452606068c8d2b1c314ff7e",
+                "reference": "0e9175fcc4d6cbcae452606068c8d2b1c314ff7e",
+                "shasum": ""
             },
             "require": {
                 "ext-ffi": "*",
@@ -24,6 +30,7 @@
                 "phpstan/phpstan": "^0.12.79",
                 "phpunit/phpunit": "^9"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -45,9 +52,11 @@
                 }
             ],
             "description": "bindings for libvoikko",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/siiptuo/voikko-php/tree/master",
+                "issues": "https://github.com/siiptuo/voikko-php/issues"
+            },
+            "time": "2021-03-13T16:37:39+00:00"
         }
     ],
     "packages-dev": [],
