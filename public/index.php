@@ -2,8 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$word = trim($_GET['word']);
-
+$word = isset($_GET['word']) ? trim($_GET['word']) : '';
 if (!empty($word)) {
     $voikko = new \Siiptuo\Voikko\Voikko();
     $analyses = $voikko->analyzeWord($word);
