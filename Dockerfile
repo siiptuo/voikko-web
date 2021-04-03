@@ -1,5 +1,7 @@
 FROM debian:buster AS voikko
-RUN apt-get update && apt-get install -y build-essential curl libz-dev libreadline-dev python3
+RUN apt-get update \
+    && apt-get install -y build-essential curl libz-dev libreadline-dev python3 \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN curl -LO https://bitbucket.org/mhulden/foma/downloads/foma-0.9.18.tar.gz
 RUN tar xzf foma-0.9.18.tar.gz
@@ -19,7 +21,10 @@ WORKDIR voikko-fi-2.4
 RUN make vvfst && make vvfst-install DESTDIR=/usr/share/voikko
 
 FROM php:8-fpm-buster
-RUN apt-get update && apt-get install -y libffi-dev && docker-php-ext-install ffi
+RUN apt-get update \
+    && apt-get install -y libffi-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && docker-php-ext-install ffi
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && echo 'ffi.enable=true' >> "$PHP_INI_DIR/php.ini"
 COPY --from=voikko /usr/lib/libvoikko.so* /usr/lib/
 COPY --from=voikko /usr/share/voikko /usr/share/voikko
